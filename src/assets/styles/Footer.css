@@ -1,0 +1,13 @@
+.footer {
+  position: absolute;
+  color: var(--color-text-light);
+  background-color: var(--color-background-dark);
+  text-align: center;
+  height: var(--footer-height);
+  bottom: 0px;
+  width: 100vw;
+}
+
+.footer__logo {
+  margin-top: 66px;
+}
