@@ -7,12 +7,10 @@ import './fonts/Montserrat-Regular.ttf'
 function App({ children }) {
   return (
     <div className="App">
-      <div className="content-wrap">
-        <Header />
-        <section className="page-content">
-          {children}
-        </section>
-      </div>
+      <Header />
+      <section className="page-content">
+        {children}
+      </section>
       <Footer />
     </div>
   );

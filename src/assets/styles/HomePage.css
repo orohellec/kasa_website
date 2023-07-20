@@ -1,0 +1,35 @@
+.welcome {
+  height: 223px;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../images/mountain.png');
+  border-radius: 20px;
+}
+
+.welcome__content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+.welcome__title {
+  font-size: 3rem;
+  color: var(--color-text-light);
+}
+
+.housing {
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 60px;
+  background-color: var(--color-background-grey);
+  border-radius: 25px;
+  z-index: -1;
+}

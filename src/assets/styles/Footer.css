@@ -1,5 +1,5 @@
 .footer {
-  position: absolute;
+  margin-top: auto;
   color: var(--color-text-light);
   background-color: var(--color-background-dark);
   text-align: center;

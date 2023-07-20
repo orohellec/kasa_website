@@ -8,11 +8,13 @@ import {
 
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
+import housingData from './data/housing.json'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
+    loader: async () => housingData
   },
   {
     path: "a-propos",
