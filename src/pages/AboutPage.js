@@ -1,17 +1,25 @@
 import App from '../App'
+import '../assets/styles/AboutPage.css'
 import WindowDropDown from '../components/WindowDropDown'
 import Banner from '../components/Banner'
+
+import aboutData from '../data/aboutpageData'
 
 const AboutPage = () => {
   return (
     <App>
       <Banner title="" image="aboutpage_banner.png" />
-      <WindowDropDown
-        title="Fiabilité"
-        text="Les annonces postées sur Kasa garantissent une fiabilité 
-        totale. Les photos sont conformes aux logements, et toutes les informations 
-        sont régulièrement vérifiées par nos équipes."
-      />
+      <div className="values">
+        {aboutData.map((data, index) => {
+          return (
+            <WindowDropDown
+              key={index}
+              title={data.title}
+              text={data.text}
+            />
+          )
+        })}
+      </div>
     </App>
   )
 }
