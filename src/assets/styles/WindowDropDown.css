@@ -1,0 +1,19 @@
+.w-dropdown {
+  max-width: 1023px;
+  margin: auto;
+}
+
+.w-dropdown__title-wrapper {
+  border-radius: 10px;
+  background-color: var(--color-background-primary);
+  color: var(--color-text-light);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.w-dropdown__content {
+  padding: 20px 20px;
+  background-color: var(--color-background-grey);
+  border-radius: 10px;
+}

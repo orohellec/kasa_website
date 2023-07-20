@@ -1,19 +1,16 @@
 import App from '../App'
 import '../assets/styles/HomePage.css'
-import Card from '../components/card'
+import Banner from '../components/Banner'
+import Card from '../components/Card'
 
 import { useLoaderData } from 'react-router-dom'
 
 const HomePage = () => {
   const housing = useLoaderData();
-  // console.log(data)
+
   return (
     <App>
-      <section className="welcome">
-        <div className="welcome__content">
-          <h1 className="welcome__title">Chez vous, partout et ailleurs</h1>
-        </div>
-      </section>
+      <Banner title="Chez vous, partout et ailleurs" image="homepage_banner.png" />
       <section className="housing">
         {housing.map(housing => {
           return <Card key={housing.id} housing={housing} />
