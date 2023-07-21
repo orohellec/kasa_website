@@ -17,7 +17,7 @@ const HousingPage = () => {
   return (
     <App>
       <p>{housing.title}</p>
-      <Carrousel />
+      <Carrousel housing={housing} />
     </App>
   )
 }
