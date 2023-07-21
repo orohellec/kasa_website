@@ -8,6 +8,9 @@ import {
 
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
+import HousingPage from './pages/HousingPage'
+import NotFoundPage from './pages/NotFoundPage';
+
 import housingData from './data/housing.json'
 
 const router = createBrowserRouter([
@@ -19,6 +22,18 @@ const router = createBrowserRouter([
   {
     path: "a-propos",
     element: <AboutPage />
+  },
+  {
+    path: "logement/:id",
+    element: <HousingPage />,
+    loader: async ({ params }) => {
+      const housing = housingData.find(housing => housing.id === params.id)
+      return (housing ? housing : null)
+    }
+  },
+  {
+    path: "*",
+    element: <NotFoundPage />
   }
 ])
 
