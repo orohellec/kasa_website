@@ -1,0 +1,6 @@
+.tag {
+  padding: 5px 10px;
+  background-color: var(--color-background-primary);
+  color: var(--color-text-light);
+  border-radius: 10px;
+}

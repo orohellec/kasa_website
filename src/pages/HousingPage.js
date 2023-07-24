@@ -1,7 +1,10 @@
 import '../assets/styles/HousingPage.css'
 import App from '../App'
-import Carrousel from '../components/Carrousel'
+
 import NotFoundPage from './NotFoundPage'
+import Carrousel from '../components/Carrousel'
+import Tag from '../components/Tag'
+import HostCard from '../components/HostCard'
 
 import { useLoaderData } from 'react-router-dom'
 
@@ -16,8 +19,29 @@ const HousingPage = () => {
 
   return (
     <App>
-      <p>{housing.title}</p>
-      <Carrousel housing={housing} />
+      <div className="housing__wrapper">
+        <Carrousel housing={housing} />
+        <div className="housing__content-top">
+          <div className="housing__content-left">
+            <h1 className="housing__title">{housing.title}</h1>
+            <h2 className="housing__location">{housing.location}</h2>
+            <h3 className="housing__tags">
+              {housing.tags.map((tag, index) =>
+                <Tag key={index} text={tag} />
+              )}
+            </h3>
+          </div>
+          <div className="housing__content-right">
+            <HostCard
+              fullname={housing.host.name}
+              pictureUrl={housing.host.picture}
+              rating={housing.rating}
+            />
+          </div>
+        </div>
+        <div className="housing__content-bottom">
+        </div>
+      </div>
     </App>
   )
 }
