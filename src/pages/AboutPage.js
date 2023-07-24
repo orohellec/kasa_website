@@ -15,8 +15,11 @@ const AboutPage = () => {
             <WindowDropDown
               key={index}
               title={data.title}
-              text={data.text}
-            />
+            >
+              <p>
+                {data.text}
+              </p>
+            </WindowDropDown>
           )
         })}
       </div>

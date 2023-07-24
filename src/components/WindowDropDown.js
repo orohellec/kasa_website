@@ -1,7 +1,7 @@
 import '../assets/styles/WindowDropDown.css'
 import { useState } from 'react'
 
-const WindowDropdown = ({ title, text }) => {
+const WindowDropdown = ({ title, children }) => {
   const [visible, setVisible] = useState(true);
 
   const hideShowContent = () => {
@@ -43,11 +43,12 @@ const WindowDropdown = ({ title, text }) => {
           </svg>
         }
       </div>
-      {visible ?
-        <p className="w-dropdown__content">
-          {text}
-        </p> :
-        null
+      {
+        visible ?
+          <div className="w-dropdown__content">
+            {children}
+          </div> :
+          null
       }
 
     </article>

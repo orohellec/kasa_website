@@ -5,6 +5,7 @@ import NotFoundPage from './NotFoundPage'
 import Carrousel from '../components/Carrousel'
 import Tag from '../components/Tag'
 import HostCard from '../components/HostCard'
+import WindowDropdown from '../components/WindowDropDown'
 
 import { useLoaderData } from 'react-router-dom'
 
@@ -40,6 +41,16 @@ const HousingPage = () => {
           </div>
         </div>
         <div className="housing__content-bottom">
+          <WindowDropdown title="Description">
+            <p>{housing.description}</p>
+          </WindowDropdown>
+          <WindowDropdown title="Équipements">
+            <ul className="housing__equipments">
+              {housing.equipments.map((equipment, index) =>
+                <li key={index}>{equipment}</li>
+              )}
+            </ul>
+          </WindowDropdown>
         </div>
       </div>
     </App>

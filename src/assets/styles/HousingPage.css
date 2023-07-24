@@ -23,3 +23,13 @@
   display: flex;
   gap: 20px;
 }
+
+.housing__content-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+}
+
+.housing__equipments {
+  list-style-type: none;
+}

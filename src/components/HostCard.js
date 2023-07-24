@@ -1,8 +1,7 @@
 import '../assets/styles/HostCard.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar as fullStar } from '@fortawesome/free-solid-svg-icons'
-import { faStar as emptyStar } from '@fortawesome/free-regular-svg-icons'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 const HostCard = (({ fullname, pictureUrl, rating }) => {
   const words = fullname.split(' ')
@@ -15,7 +14,7 @@ const HostCard = (({ fullname, pictureUrl, rating }) => {
     starsRating.push(
       <FontAwesomeIcon
         key={i}
-        icon={fullStar}
+        icon={faStar}
         style={{ color: "#FF6060", }}
       />
     )
@@ -24,8 +23,8 @@ const HostCard = (({ fullname, pictureUrl, rating }) => {
     starsRating.push(
       <FontAwesomeIcon
         key={i + nStars}
-        icon={emptyStar}
-        style={{ color: "#FF6060", }}
+        icon={faStar}
+        style={{ color: "#E3E3E3", }}
       />
     )
   }
