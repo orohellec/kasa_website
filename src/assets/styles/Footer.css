@@ -11,3 +11,9 @@
 .footer__logo {
   margin-top: 66px;
 }
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    font-size: 0.75rem;
+  }
+}

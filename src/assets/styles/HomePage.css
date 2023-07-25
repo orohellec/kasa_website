@@ -2,8 +2,22 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 50px;
   padding: 60px;
   background-color: var(--color-background-grey);
   border-radius: 25px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .housing {
+    padding: 20px 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .housing {
+    padding: 0px;
+    background-color: white;
+  }
 }

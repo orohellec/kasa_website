@@ -3,6 +3,16 @@
   /*Can be any text*/
   src: local("Montserrat-Regular"),
     url("../../fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat-Bold"),
+    url("../../fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
 }
 
 * {
@@ -44,12 +54,18 @@ a {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 50px;
 }
 
 .page-content {
   max-width: var(--content-width);
   width: 100%;
-  margin: auto;
   flex-grow: 5;
+}
+
+@media only screen and (max-width: 1280px) {
+  .page-content {
+    padding: 0px 20px;
+  }
 }

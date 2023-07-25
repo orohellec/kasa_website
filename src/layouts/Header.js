@@ -1,6 +1,6 @@
 import logo from '../assets/images/header_logo.png'
 import '../assets/styles/Header.css'
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const activeLink = ({ isActive, isPending }) => {
   const linkClass = 'header__link'
@@ -13,7 +13,9 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__content">
-        <img src={logo} alt="logo" className="header__logo" />
+        <Link to="/">
+          <img src={logo} alt="logo" className="header__logo" />
+        </Link>
         <nav className="header__navbar">
           <NavLink
             className={activeLink}

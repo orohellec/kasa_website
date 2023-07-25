@@ -25,3 +25,10 @@
 .host__rating {
   text-align: right;
 }
+
+@media only screen and (max-width: 600px) {
+  .host {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}

@@ -20,4 +20,11 @@
 .banner__title {
   font-size: 3rem;
   color: var(--color-text-light);
+  padding: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .banner__title {
+    font-size: 1.5rem;
+  }
 }

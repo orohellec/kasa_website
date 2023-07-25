@@ -33,3 +33,19 @@
 .housing__equipments {
   list-style-type: none;
 }
+
+@media only screen and (max-width: 600px) {
+  .housing__content-top {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .housing__content-right {
+    width: 100%;
+  }
+
+  .housing__content-bottom {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
