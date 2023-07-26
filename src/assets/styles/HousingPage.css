@@ -10,6 +10,7 @@
 }
 
 .housing__title {
+  margin-right: 20px;
   font-size: 2.25rem;
 }
 
@@ -22,6 +23,7 @@
   margin-top: 20px;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .housing__content-bottom {
